@@ -2,13 +2,15 @@ import React from 'react';
 
 import {createStackNavigator} from '@react-navigation/stack';
 import HomeScreen from '../HomeScreen';
+import DetailsScreen from '../DetailsScreen';
 
 const Stack = createStackNavigator();
 
 const StackScreen = () => {
   return (
     <Stack.Navigator>
-      <Stack.StackScreen name="Home" component={HomeScreen} />
+      <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Screen name="Details" component={DetailsScreen} />
     </Stack.Navigator>
   );
 };
