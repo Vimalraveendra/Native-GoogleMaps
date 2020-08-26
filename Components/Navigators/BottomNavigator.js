@@ -7,6 +7,11 @@ import DetailsScreen from '../DetailsScreen';
 import ProfileScreen from '../ProfileScreen';
 import ExploreScreen from '../Explore';
 
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import IonIcon from 'react-native-vector-icons/Ionicons';
+Icon.loadFont();
+IonIcon.loadFont();
+
 const BottomTab = createMaterialBottomTabNavigator();
 
 const BottomTabScreen = () => {
@@ -18,10 +23,42 @@ const BottomTabScreen = () => {
       screenOptions={{
         tabBarColor: '#f4511e',
       }}>
-      <BottomTab.Screen name="Home" component={HomeScreen} />
-      <BottomTab.Screen name="Details" component={DetailsScreen} />
-      <BottomTab.Screen name="Profile" component={ProfileScreen} />
-      <BottomTab.Screen name="Explore" component={ExploreScreen} />
+      <BottomTab.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{
+          tabBarLabel: 'Home',
+          tabBarIcon: ({color}) => <Icon name="home" color={color} size={26} />,
+        }}
+      />
+      <BottomTab.Screen
+        name="Details"
+        component={DetailsScreen}
+        options={{
+          tabBarLabel: 'Details',
+          tabBarIcon: ({color}) => <Icon name="bell" color={color} size={26} />,
+        }}
+      />
+      <BottomTab.Screen
+        name="Profile"
+        component={ProfileScreen}
+        options={{
+          tabBarLabel: 'Profile',
+          tabBarIcon: ({color}) => (
+            <Icon name="account" color={color} size={26} />
+          ),
+        }}
+      />
+      <BottomTab.Screen
+        name="Explore"
+        component={ExploreScreen}
+        options={{
+          tabBarLabel: 'Explore',
+          tabBarIcon: ({color}) => (
+            <IonIcon name="md-aperture" color={color} size={26} />
+          ),
+        }}
+      />
     </BottomTab.Navigator>
   );
 };
