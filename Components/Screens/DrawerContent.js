@@ -58,30 +58,45 @@ const DrawerContent = (props) => {
                 <Icon name="home-outline" color={color} size={size} />
               )}
               label="Home"
+              onPress={() => {
+                props.navigation.navigate('Home');
+              }}
             />
             <DrawerItem
               icon={({color, size}) => (
                 <Icon name="account-outline" color={color} size={size} />
               )}
               label="Profile"
+              onPress={() => {
+                props.navigation.navigate('Profile');
+              }}
             />
             <DrawerItem
               icon={({color, size}) => (
                 <Icon name="bookmark-outline" color={color} size={size} />
               )}
               label="Bookmarks"
+              onPress={() => {
+                props.navigation.navigate('BookMarks');
+              }}
             />
             <DrawerItem
               icon={({color, size}) => (
                 <Icon name="eye-settings-outline" color={color} size={size} />
               )}
               label="Settings"
+              onPress={() => {
+                props.navigation.navigate('Settings');
+              }}
             />
             <DrawerItem
               icon={({color, size}) => (
                 <Icon name="account-check-outline" color={color} size={size} />
               )}
               label="Support"
+              onPress={() => {
+                props.navigation.navigate('Support');
+              }}
             />
           </Drawer.Section>
           <Drawer.Section title="Preference">
