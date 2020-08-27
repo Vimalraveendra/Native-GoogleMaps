@@ -3,15 +3,14 @@ import React from 'react';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 
 import StackScreen from './StackNavigator';
-import DetailsScreen from '../Screens/DetailsScreen';
+import DrawerContent from '../Screens/DrawerContent';
 
 const Drawer = createDrawerNavigator();
 
 const DrawerScreen = () => {
   return (
-    <Drawer.Navigator>
+    <Drawer.Navigator drawerContent={(props) => <DrawerContent {...props} />}>
       <Drawer.Screen name="Home" component={StackScreen} />
-      <Drawer.Screen name="Details" component={DetailsScreen} />
     </Drawer.Navigator>
   );
 };
