@@ -1,11 +1,12 @@
 import React from 'react';
 
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, Button} from 'react-native';
 
-const ExploreScreen = () => {
+const ExploreScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Explore Screen</Text>
+      <Button title="Go Back" onPress={() => navigation.navigate('Profile')} />
     </View>
   );
 };
