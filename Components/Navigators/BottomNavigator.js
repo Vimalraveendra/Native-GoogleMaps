@@ -2,10 +2,10 @@ import React from 'react';
 
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 
-import HomeScreen from '../HomeScreen';
-import DetailsScreen from '../DetailsScreen';
-import ProfileScreen from '../ProfileScreen';
-import ExploreScreen from '../Explore';
+import HomeScreen from '../Screens/HomeScreen';
+import DetailsScreen from '../Screens/DetailsScreen';
+import ProfileScreen from '../Screens/ProfileScreen';
+import ExploreScreen from '../Screens/Explore';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import IonIcon from 'react-native-vector-icons/Ionicons';

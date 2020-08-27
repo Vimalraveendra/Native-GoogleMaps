@@ -2,7 +2,7 @@ import React from 'react';
 
 import {createStackNavigator} from '@react-navigation/stack';
 
-import DetailsScreen from '../DetailsScreen';
+import DetailsScreen from '../Screens/DetailsScreen';
 
 import BottomTabScreen from './BottomNavigator';
 import Icon from 'react-native-vector-icons/Ionicons';
