@@ -4,14 +4,24 @@ import {View, StyleSheet} from 'react-native';
 
 import {DrawerItem} from '@react-navigation/drawer';
 
-import {Text, Drawer, TouchableRipple, Switch} from 'react-native-paper';
+import {
+  Text,
+  Drawer,
+  TouchableRipple,
+  Switch,
+  useTheme,
+} from 'react-native-paper';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import {myTheme} from '../../../Context/Context';
 Icon.loadFont();
 
 const DrawerSection = (props) => {
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
-  const toggleTheme = () => setIsDarkTheme(!isDarkTheme);
+  // const [isDarkTheme, setIsDarkTheme] = useState(false);
+  // const toggleTheme = () => setIsDarkTheme(!isDarkTheme);
+  const PaperTheme = useTheme();
+  const toggleTheme = React.useContext(myTheme);
+
   return (
     <View>
       <Drawer.Section style={styles.drawerSection}>
@@ -69,7 +79,7 @@ const DrawerSection = (props) => {
           <View style={styles.preference}>
             <Text>Dark Theme</Text>
             <View pointerEvents="none">
-              <Switch value={isDarkTheme} />
+              <Switch value={PaperTheme.dark} />
             </View>
           </View>
         </TouchableRipple>
