@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 
 import {View, StyleSheet} from 'react-native';
 
-import {DrawerContentScrollView, DrawerItem} from '@react-navigation/drawer';
+import {DrawerItem} from '@react-navigation/drawer';
 
 import {Text, Drawer, TouchableRipple, Switch} from 'react-native-paper';
 
@@ -10,7 +10,6 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 Icon.loadFont();
 
 const DrawerSection = (props) => {
-  console.log('props', props);
   const [isDarkTheme, setIsDarkTheme] = useState(false);
   const toggleTheme = () => setIsDarkTheme(!isDarkTheme);
   return (
